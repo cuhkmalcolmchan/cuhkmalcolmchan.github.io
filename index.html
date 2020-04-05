@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <title>Brave New World</title>
     <style type="text/css">
       * {
@@ -41,7 +41,7 @@
   <body class="container-fluid">
     <header>
       <nav class="row">
-        <h1 class="col-sm-4 text-center">Bio</h1>
+        <h1 class="col-sm-4 text-center" onclick="alert(popUpAlert);">Bio</h1>
         <h1 class="col-sm-4 text-center">Portfolio</h1>
         <h1 class="col-sm-4 text-center">Contact</h1>
       </nav>
@@ -65,19 +65,11 @@
       </div>
     </footer>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script type="text/javascript">
-      $(function() {
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Your work has been saved',
-          showConfirmButton: false
-          timer: 1500
-        });
-      };
+    <script>
+      $('nav').on('click', 'h1', function(event) {Swal.fire({position: 'top-end', icon: 'success', title: $(this).text()});});
     </script>
   </body>
 </html>
