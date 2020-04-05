@@ -4,9 +4,80 @@
     <meta charset="utf-8">
 	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Brave New World</title>
+    <style type="text/css">
+      * {
+        /*border: 1px dashed red;*/
+      }
+      body {
+        background: #e5e8e8;
+        color: #000;
+      }
+      h1 {
+        color: #cb4335;
+      }
+      h2 {
+        color: #f1c40f;
+      }
+      h3 {
+        color: #f39c12;
+      }
+      h4 {
+        color: #edbb99;
+      }
+      h5 {
+        color: #2e4053;
+      }
+      h6 {
+        color: #5d6d7e;
+      }
+      footer {
+        background-color: #2e4053;
+        color: #fae5d3;
+      }
+    </style>
   </head>
-  <body>
-    <h1>Welcome to the Brave New World!</h1>
+  <body class="container-fluid">
+    <header>
+      <nav class="row">
+        <h1 class="col-sm-4 text-center">Bio</h1>
+        <h1 class="col-sm-4 text-center">Portfolio</h1>
+        <h1 class="col-sm-4 text-center">Contact</h1>
+      </nav>
+    </header>
+    
+    <article>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h5>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <p>Once upon a time...</p>
+    </article>
+    
+    <footer class="row">
+      <div class="d-none d-md-block col-md-6"></div>
+      <div class="col-12 col-md-6">
+        <p>Disclaimer: </p>
+        <p>Investment involves risks. Past performance of any particular fund or product mentioned in this document is not indicative of future performance of the relevant fund or product, and the value of the each fund or product mentioned in this document may go down as well as up. You should not invest solely in reliance on this document. There is no assurance on investment returns and you may not get back the amount originally invested.</p>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript">
+      $(function() {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Your work has been saved',
+          showConfirmButton: false
+          timer: 1500
+        });
+      };
+    </script>
   </body>
 </html>
