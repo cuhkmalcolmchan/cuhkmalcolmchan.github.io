@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>passwork - Configurable password generation entirely independent of your mind.</title>
+  <script type="text/javascript" src="password.js"></script>
+  <link rel="stylesheet" type="text/css" href="common.css">
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function() {
+  		$(".buttonset").buttonset();
+  	});
+  </script>
+</head>
+	<body>
+  	    <div id="content">
+       	 <div id="main">
+   	         <input id="pwfield" name="pwfield" onclick="this.select();" onfocus="this.blur; return false;"
+            style="font-family: 'Lucida Console', monospace;" placeholder="********"
+            size="8" />
+            <span id="caption">Configurable password generation<br />Entirely independent of your mind</span>
+      	      <form id="pwgen" name="pwgen">
+       	         <div>
+       	             <label for="symbolSet" data-tip="Check all the sets of symbols you would like to include in your password.">Symbol set(s)</label>
+        	            <br />
+         	           <div class="buttonset">
+         	               <input type="checkbox" id="symbolOptionN" name="symbolSet" value="N" />
+          	               <label for="symbolOptionN" data-tip="Digits from 0 to 9">0-9</label>
+          	               <input type="checkbox" id="symbolOptionL" name="symbolSet" value="L" />
+           	               <label for="symbolOptionL" data-tip="Lowercase English alphabet">a-z</label>
+           	               <input type="checkbox" id="symbolOptionU" name="symbolSet" value="U" />
+            	           <label for="symbolOptionU" data-tip="Uppercase English alphabet">A-Z</label>
+            	           <input type="checkbox" id="symbolOptionS" name="symbolSet" value="S" />
+            	           <label for="symbolOptionS" data-tip="!@#$%^&*()...">symbols</label>
+             	       </div>
+            	    </div>
+            	    <div>
+             	       <label for="digit" data-tip="The number of digits to be generated">Length</label>
+             	       <br />
+              	      <input type="number" id="digit" name="digit" max="200" min="1" placeholder="8" value="8"
+                    required />
+             	   </div>
+            	    <div>
+                	    <label for="generateButton" data-tip="Click here to generate a new password">
+                   	     <button id="generateButton" onclick="
+                   	     	e = $('#pwfield').get(0);
+                   	     	f = $('#digit').get(0);
+                   	     	e.value = passwordGen({
+                   	     		digit: f.value, 
+                   	     		includeNumerals: $('#symbolOptionN').get(0).checked, 
+                   	     		includeLowercase: $('#symbolOptionL').get(0).checked, 
+                   	     		includeUppercase: $('#symbolOptionU').get(0).checked, 
+                   	     		includeSymbols: $('#symbolOptionS').get(0).checked
+                   	     	});
+                   	     	e.size = f.value;
+                   	     	return false;
+                   	     ">Generate</button>
+                 	   </label>
+             	   </div>
+          	  </form>
+       	 </div>
+   	 </div>
+   	    <div id="footer">
+   	 		<div id="footer-details">
+   	 			<table id="footer-details-table">
+   	 				<tbody>
+   	 					<tr>
+   	 						<th>ABOUT</th>
+   	 						<th>CREDIT</th>
+   	 						<th>DISCLAIMER</th>
+   	 					</tr>
+   	 					<tr>
+   	 						<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mauris orci, ultrices non semper at, lobortis sit amet justo. Vestibulum augue magna, blandit in lobortis eu, consectetur sed arcu. Morbi ultrices aliquet sapien et bibendum. Aliquam lacinia iaculis diam sodales egestas. Aliquam erat volutpat. Nulla eget lectus turpis. Integer porttitor nulla a augue gravida a placerat ante porttitor. Maecenas euismod urna eu lorem hendrerit ac commodo nisi rutrum. Phasellus id nisi venenatis leo pretium faucibus ut id neque.</td>
+   	 						<td>Designed by Leo Darius C.<br />Conceived and programmed by Malcolm Chan</td>
+   	 						<td>Vestibulum ut quam quis odio blandit varius. Donec sollicitudin mauris ac nisi tincidunt ut convallis diam adipiscing. Cras ipsum augue, placerat eu ullamcorper quis, vestibulum nec velit. Sed nec nunc urna. Donec nec odio vel libero bibendum cursus non sit amet arcu. Aliquam vitae accumsan massa. Vivamus condimentum convallis elementum. Quisque mi neque, fermentum at malesuada porttitor, condimentum in quam. Nunc tincidunt massa ac mauris pharetra feugiat. Phasellus placerat aliquet nibh, sit amet placerat dolor molestie consequat.</td>
+   	 					</tr>
+   	 				</tbody>
+   	 			</table>
+   	 		</div>
+   	 	</div>
+	</body>
+</html>

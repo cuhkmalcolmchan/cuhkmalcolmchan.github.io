@@ -1,0 +1,146 @@
+body {
+    font: 18px Helvetica, 'sans-serif';
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+h1 {
+    font: 0.7em Helvetica, "sans-serif";
+    margin-bottom: 2em;
+}
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#main {
+    width: 97%;
+    height: 50%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 15%;
+}
+div#main, div#main div {
+    text-align: center;
+}
+span#caption {
+	font: normal normal 1em Helvetica, "sans-serif";
+	display: block;
+	color: rgba(255, 255, 255, 0.4);
+}
+label {
+    text-shadow: 0 -1px #91B023;
+}
+.group {
+    border: double #fff;
+    border-radius: 3px;
+}
+.block-center {
+    width: 50%;
+    margin: auto;
+}
+.left-align {
+    text-align: left !important;
+}
+input {
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    color: #fff;
+}
+#pwfield {
+    font-size: 4em;
+    text-shadow: 0 0.05em #003f7f;
+}
+div {
+    margin-bottom: 1.2em;
+}
+button {
+    color: #fff;
+    border: double #fff;
+    background-color: transparent;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #A8CC27;
+}
+label::after {
+    content: attr(data-tip);
+    font-size: 10px;
+    position: absolute;
+    z-index: 999;
+    white-space:nowrap;
+    background:#000;
+    color:#B5DB2C;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+    opacity: 0;
+    text-shadow: none;
+}
+label:hover::after {
+    opacity: 1;
+    margin-left: 16px;
+}
+div#content, div#footer {
+    margin: 0;
+}
+div#content {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #110c5b; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #2d73bb 0%, #110c5b 75%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#2d73bb), color-stop(75%,#110c5b)); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  #2d73bb 0%,#110c5b 75%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  #2d73bb 0%,#110c5b 75%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  #2d73bb 0%,#110c5b 75%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  #2d73bb 0%,#110c5b 75%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d73bb', endColorstr='#110c5b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    /*background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 116, color-stop(0%, rgb(30, 161, 255)), color-stop(100%, #040236));
+    background-image: -webkit-radial-gradient(center center, farthest-corner, rgb(30, 161, 255) 0%, #040236 100%);
+    background-image: -moz-radial-gradient(center center, farthest-corner, rgb(30, 161, 255) 0%, #040236 100%);
+    background-image: -ms-radial-gradient(center center, farthest-corner, rgb(30, 161, 255) 0%, #040236 100%);
+    background-image: -o-radial-gradient(center center, farthest-corner, rgb(30, 161, 255) 0%, #040236 100%);
+    background-image: radial-gradient(farthest-corner at center center, rgb(30, 161, 255) 0%, #040236 100%);*/
+}
+div#footer {
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    background: white;
+}
+div#footer div#footer-details {
+	/*padding-top: 125px;*/
+}
+table#footer-details-table {
+	width: 100%;
+	margin: 25px auto;
+	padding: 0 50px;
+	border-spacing: 5px;
+}
+table#footer-details-table th, table#footer-details-table td {
+	padding: 0 15px;
+}
+table#footer-details-table th {
+	/*background-color: rgba(0, 0, 0, 0.75);*/
+	text-align:left;
+	font: normal normal 0.8em Verdana;
+	letter-spacing: 3px;
+	color: #c0c0c0;
+	width: 33%;
+	/*padding: 10px;*/
+}
+table#footer-details-table td {
+	font-size: 0.65em;
+	color: #c0c0c0;
+	vertical-align: top;
+	text-shadow: 0 0.05em #a0a0a0;
+}
